@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/backgroundRelativeLogin"
+
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/eye_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eye_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/heading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diabetic"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:id="@+id/heading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retinopathy"
+            android:layout_toRightOf="@+id/heading1"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/usernameLayout"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/headerLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/firstName"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:hint="Firstname"
+            app:met_baseColor="@color/white"
+            android:textSize="15dp"
+            android:inputType="text|textVisiblePassword|textNoSuggestions"
+            android:nextFocusDown="@id/password"
+            android:textCursorDrawable="@null"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@color/white"
+            app:met_textColorHint="@color/white" />
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/firstName"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/usernameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/password"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:hint="Password"
+            android:textSize="15dp"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@null"
+
+            app:met_baseColor="@color/white"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@color/white"
+            app:met_textColorHint="@color/white" />
+
+        <ImageView
+            android:id="@+id/passwordIcon"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/password"
+             />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Login"
+        android:textColor="@color/loader_color" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Register ? "
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/forgotPasword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        android:layout_below="@+id/register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/white"
+        />
+
+</RelativeLayout>
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet"/>
+
+<meta charset=utf-8 />
+</head>
+<style>
+
+   #label{
+    text-align: center;
+    background-image:url('/assets/bg.png');
+    width:400px;
+    height:60px;
+    color:white;
+    border-color:white;
+    margin:auto;
+    display:block;
+    font-family:Arial;
+    font-size:25px;
+  }
+
+  #submit{
+    display:block;
+    text-align: center;
+    background-image:url('/assets/bg.png');
+    width:400px;
+    height:60px;
+    color:white;
+    border-color:white;
+    margin:auto;
+    font-family:Arial;
+    font-size:25px;
+  }
+
+  #preview_image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:400px;
+    height:300px;
+    margin-top:35px;
+  }
+
+#ptag{
+  font-family:Arial;
+  font-size:25px;
+  margin-top:20px;
+  color:black;
+}
+
+body{
+  overflow:auto;
+}
+
+  </style>
+
+<body>
+
+<div style="overflow:auto">
+  <form method="POST" enctype="multipart/form-data">
+    <p align="center" id="ptag"> Please Upload Eye Image</p>
+    <img id="preview_image" /><br><br>
+    <label for="choose_file" style="" class="btn btn-primary btn-block btn-outlined" id="label">Choose File to Upload</label>
+    <input type='file' onchange="readURL(this);" style="visibility:hidden" id="choose_file" name="predict_image"/>
+    <input type="submit" name="submit" value="Submit" id="submit" >
+
+  </form>
+</div>
+</body>
+
+
+<script>
+  function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+
+              reader.onload = function (e) {
+                  $('#preview_image')
+                      .attr('src', e.target.result)
+
+              };
+
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+  </script>
+</html>

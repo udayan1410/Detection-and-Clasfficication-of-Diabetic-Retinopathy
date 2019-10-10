@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <include android:id="@+id/topLayout"
+      layout="@layout/layout_top_actionbar"/>
+
+    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+        android:id="@+id/radar_loading"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:pulse_count="6"
+        app:pulse_repeat="0"
+        app:pulse_color="@color/loader_color"
+        app:pulse_interpolator="Decelerate"
+        app:pulse_startFromScratch="true"
+
+        />
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@mipmap/eye_loader"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/loadingStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:textColor="#605e5e"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:text="Loading Please Wait . . . "
+        />
+
+
+</RelativeLayout>

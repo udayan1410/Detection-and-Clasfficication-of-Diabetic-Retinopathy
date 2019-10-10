@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+
+            <ImageView
+                android:id="@+id/chosenRightImage"
+                android:layout_width="300dp"
+                android:layout_height="260dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/eye_loader" />
+
+            <TextView
+                android:id="@+id/predict_text"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chosenRightImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="Choose Right Eye image"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+
+            <Button
+                android:id="@+id/select_right_image"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/predict_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:text="Choose Image"
+                android:textColor="@color/loader_color" />
+
+            <Button
+                android:id="@+id/predict"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/select_right_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Predict"
+                android:textColor="@color/loader_color"
+                android:layout_marginBottom="25dp"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

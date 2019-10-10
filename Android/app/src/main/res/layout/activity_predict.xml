@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PredictActivity"
+    >
+
+    <include
+        android:id="@+id/topLayout"
+        layout="@layout/layout_top_noback" />
+
+
+    <TextView
+        android:id="@+id/tyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Thank you!"
+        android:textColor="@color/textgrey"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tyText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="USERNAME"
+        android:textColor="@color/loader_color"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Following are you results :"
+        android:textColor="@color/textgrey"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:id="@+id/resutHolderLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/message"
+        android:layout_marginTop="50dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/leftEyeResultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Left Eye Result : "
+                android:textSize="25dp"
+                android:textColor="@color/lightblack"
+                />
+
+            <TextView
+                android:id="@+id/leftEyeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/leftEyeResultText"
+                android:textSize="25dp"
+                android:textColor="@color/loader_color"
+                android:text="Mild DR"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/rightEyeResultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Right Eye Result : "
+                android:textSize="25dp"
+                android:textColor="@color/lightblack"
+                />
+
+            <TextView
+                android:id="@+id/rightEyeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/rightEyeResultText"
+                android:textSize="25dp"
+                android:textColor="@color/loader_color"
+                android:text="Mild DR"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/saveAndExit"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/resutHolderLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Save And Exit"
+        android:textSize="18dp"
+        android:textColor="@color/loader_color"
+        android:layout_marginBottom="25dp"
+        />
+
+</RelativeLayout>
+    </ScrollView>
+    </LinearLayout>
